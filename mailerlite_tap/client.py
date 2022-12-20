@@ -15,10 +15,10 @@ SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 
 
 class mailerlitetapStream(RESTStream):
-    """mailerlitetap stream class."""
+    """mailerlite stream class."""
 
     # TODO: Set the API's base URL here:
-    url_base = "https://api.mysample.com"
+    url_base = "https://connect.mailerlite.com/api/"
 
     # OR use a dynamic url_base:
     # @property
@@ -32,10 +32,12 @@ class mailerlitetapStream(RESTStream):
     @property
     def authenticator(self) -> APIKeyAuthenticator:
         """Return a new authenticator object."""
+        api_key = self.config.get("api_key")
+
         return APIKeyAuthenticator.create_for_stream(
             self,
-            key="x-api-key",
-            value=self.config.get("api_key"),
+            key="Authorization",
+            value=f"Bearer {api_key}",
             location="header"
         )
 
