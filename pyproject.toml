@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "mailerlite-tap"
+name = "tap-mailerlite"
 version = "0.0.1"
-description = "`mailerlite-tap` is a Singer tap for mailerlitetap, built with the Meltano Singer SDK."
+description = "`tap-mailerlite` is a Singer tap for mailerlitetap, built with the Meltano Singer SDK."
 authors = ["Amaru Escalante"]
 keywords = [
     "ELT",
@@ -31,7 +31,7 @@ s3 = ["fs-s3fs"]
 [tool.isort]
 profile = "black"
 multi_line_output = 3 # Vertical Hanging Indent
-src_paths = "mailerlite_tap"
+src_paths = "tap_mailerlite"
 
 [build-system]
 requires = ["poetry-core>=1.0.8"]
@@ -39,4 +39,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 # CLI declaration
-mailerlite-tap = 'mailerlite_tap.tap:Tapmailerlitetap.cli'
+tap-mailerlite = 'tap_mailerlite.tap:Tapmailerlitetap.cli'

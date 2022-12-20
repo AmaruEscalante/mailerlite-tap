@@ -4,7 +4,7 @@ import datetime
 
 from singer_sdk.testing import get_standard_tap_tests
 
-from mailerlite_tap.tap import Tapmailerlitetap
+from tap_mailerlite.tap import Tapmailerlitetap
 
 SAMPLE_CONFIG = {
     "start_date": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")

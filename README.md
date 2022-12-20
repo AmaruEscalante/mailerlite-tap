@@ -1,6 +1,6 @@
-# mailerlite-tap
+# tap-mailerlite
 
-`mailerlite-tap` is a Singer tap for mailerlitetap.
+`tap-mailerlite` is a Singer tap for mailerlitetap.
 
 Built with the [Meltano Tap SDK](https://sdk.meltano.com) for Singer Taps.
 
@@ -13,13 +13,13 @@ Developer TODO: Update the below as needed to correctly describe the install pro
 Install from PyPi:
 
 ```bash
-pipx install mailerlite-tap
+pipx install tap-mailerlite
 ```
 
 Install from GitHub:
 
 ```bash
-pipx install git+https://github.com/ORG_NAME/mailerlite-tap.git@main
+pipx install git+https://github.com/ORG_NAME/tap-mailerlite.git@main
 ```
 
 -->
@@ -34,7 +34,7 @@ Developer TODO: Provide a list of config options accepted by the tap.
 This section can be created by copy-pasting the CLI output from:
 
 ```
-mailerlite-tap --about --format=markdown
+tap-mailerlite --about --format=markdown
 ```
 -->
 
@@ -42,7 +42,7 @@ A full list of supported settings and capabilities for this
 tap is available by running:
 
 ```bash
-mailerlite-tap --about
+tap-mailerlite --about
 ```
 
 ### Configure using environment variables
@@ -59,14 +59,14 @@ Developer TODO: If your tap requires special access on the source system, or any
 
 ## Usage
 
-You can easily run `mailerlite-tap` by itself or in a pipeline using [Meltano](https://meltano.com/).
+You can easily run `tap-mailerlite` by itself or in a pipeline using [Meltano](https://meltano.com/).
 
 ### Executing the Tap Directly
 
 ```bash
-mailerlite-tap --version
-mailerlite-tap --help
-mailerlite-tap --config CONFIG --discover > ./catalog.json
+tap-mailerlite --version
+tap-mailerlite --help
+tap-mailerlite --config CONFIG --discover > ./catalog.json
 ```
 
 ## Developer Resources
@@ -89,10 +89,10 @@ Create tests within the `mailerlite_tap/tests` subfolder and
 poetry run pytest
 ```
 
-You can also test the `mailerlite-tap` CLI interface directly using `poetry run`:
+You can also test the `tap-mailerlite` CLI interface directly using `poetry run`:
 
 ```bash
-poetry run mailerlite-tap --help
+poetry run tap-mailerlite --help
 ```
 
 ### Testing with [Meltano](https://www.meltano.com)
@@ -112,7 +112,7 @@ Next, install Meltano (if you haven't already) and any needed plugins:
 # Install meltano
 pipx install meltano
 # Initialize meltano within this directory
-cd mailerlite-tap
+cd tap-mailerlite
 meltano install
 ```
 
@@ -120,9 +120,9 @@ Now you can test and orchestrate using Meltano:
 
 ```bash
 # Test invocation:
-meltano invoke mailerlite-tap --version
+meltano invoke tap-mailerlite --version
 # OR run a test `elt` pipeline:
-meltano elt mailerlite-tap target-jsonl
+meltano elt tap-mailerlite target-jsonl
 ```
 
 ### SDK Dev Guide

@@ -1,11 +1,11 @@
-"""Stream type classes for mailerlite-tap."""
+"""Stream type classes for tap-mailerlite."""
 
 from pathlib import Path
 from typing import Any, Dict, Optional, Union, List, Iterable
 
 from singer_sdk import typing as th  # JSON Schema typing helpers
 
-from mailerlite_tap.client import mailerlitetapStream
+from tap_mailerlite.client import mailerlitetapStream
 
 SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
 

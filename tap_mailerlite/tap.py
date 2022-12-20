@@ -4,7 +4,7 @@ from typing import List
 
 from singer_sdk import Tap, Stream
 from singer_sdk import typing as th  # JSON schema typing helpers
-from mailerlite_tap.streams import (
+from tap_mailerlite.streams import (
     mailerlitetapStream,
     SubscribersStream,
     GroupsStream,
@@ -20,7 +20,7 @@ STREAM_TYPES = [
 
 class Tapmailerlitetap(Tap):
     """mailerlitetap tap class."""
-    name = "mailerlite-tap"
+    name = "tap-mailerlite"
     config_jsonschema = th.PropertiesList(
         th.Property(
             "api_key",
