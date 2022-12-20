@@ -1,0 +1,7 @@
+{"type": "SCHEMA", "stream": "subscribers", "schema": {"properties": {"id": {"type": ["string", "null"]}, "email": {"type": ["string", "null"]}, "created_at": {"format": "date-time", "type": ["string", "null"]}, "groups": {"items": {"type": ["string"]}, "type": ["array", "null"]}}, "type": "object"}, "key_properties": ["id"]}
+{"type": "RECORD", "stream": "subscribers", "record": {"id": "74982221575882318", "email": "amaruescalante-2test@gmail.com", "created_at": "2022-12-20 03:56:58"}, "time_extracted": "2022-12-20T13:46:33.081014+00:00"}
+{"type": "STATE", "value": {"bookmarks": {"subscribers": {"starting_replication_value": null}}}}
+{"type": "RECORD", "stream": "subscribers", "record": {"id": "74982196219217510", "email": "amaruescalante-test@gmail.com", "created_at": "2022-12-20 03:56:34"}, "time_extracted": "2022-12-20T13:46:33.081206+00:00"}
+{"type": "RECORD", "stream": "subscribers", "record": {"id": "74897686514370273", "email": "sebastian.escalante@luteach.com", "created_at": "2022-12-19 05:33:19"}, "time_extracted": "2022-12-20T13:46:33.081247+00:00"}
+{"type": "STATE", "value": {"bookmarks": {"subscribers": {}}}}
+{"type": "STATE", "value": {"bookmarks": {"subscribers": {}}}}
